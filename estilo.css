@@ -1,0 +1,552 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --preto: #000;
+    --branco: #fff;
+    --laranja: #FF8A09;
+    --gelo:#E1DDD4;
+    --amarelo-opaco:#fcec7738;
+    --amarelo-full:#FCEC77;
+    --azul-escuro:#112D3F;
+}
+/***NAV BAR*/
+
+/* Estilos para o header e nav */
+header {
+  position: fixed; 
+  top: 0;
+  width: 100%; 
+  z-index: 1000; 
+  transition: background-color 0.3s; 
+}
+
+nav.desktop {
+  background-color: var(--preto); /* Preto sólido no topo */
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  transition: padding 0.3s, background-color 0.3s; 
+}
+
+nav.desktop.scrolled {
+  background-color: rgba(0, 0, 0, 0.26);
+}
+nav.desktop a.scrolled {
+  color: #ffcc005b; /* Muda a cor quando a classe "scrolled" está presente */
+  /* Adicione outras propriedades de estilo que você desejar */
+}
+
+.w7{
+  height: 5vw; 
+  transition: opacity 0.3s, visibility 0.3s; 
+}
+
+.w7.hidden {
+  opacity: 0; 
+  visibility: hidden; 
+}
+
+nav.desktop ul {
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+  display: flex; 
+  align-items: self-end; 
+  justify-content: space-between;
+  
+  padding-right: 1%;
+  width: 39%;
+}
+nav.desktop li{
+ margin: 1%;
+}
+
+nav.desktop a {
+  color: white; 
+  text-decoration: none; 
+  transition: color 0.3s, transform 0.3s; 
+ 
+}
+
+nav.desktop a:hover {
+  color: #ffcc00; 
+  transform: scale(1.1); 
+}
+
+body {
+  padding-top: 70px; /* Para que o conteúdo não fique escondido atrás do navbar */
+}
+
+/* topo */
+
+.topo {
+    background-image: url('your-background-image.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center; 
+    justify-content: end; 
+    padding: 5vw 5vw; 
+    background-image: url(/src/img/bg-1.png);
+  }
+  .card-top {
+    display: flex;
+    flex-direction: column; 
+    background-color: rgba(0, 0, 0, 0.678); 
+    color: white;
+    padding: 4vw; 
+    width: 20%;
+    height: 100%;
+    box-shadow: 0 0.5vw 2vw rgba(0, 0, 0, 0.5); 
+    border-radius: 25px;
+  }
+  .card-top h2{
+    font-size: 1.8vw;
+    text-align: center;
+  }
+  .card-top p{
+    font-size: 1.3vw;
+    padding: 15% 0;
+    font-weight: 200;
+  }
+  .button {
+    display: inline-block;
+    background-color: var(--laranja);
+    color: white;
+    padding:4%;
+    border: none;
+    border-radius: 18px; 
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s; /* Efeito de transição */
+    align-self: flex-start; /* Alinha o botão à esquerda dentro do card */
+    font-size: 1.3vw;
+    text-align: center;
+  }
+
+  .button:hover {
+    background-color: #FF8C00; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Efeito de aumento */
+  }
+
+  /* sessao 2 */
+  .sessao-2 {
+    padding: 5% 0; 
+   
+  }
+  
+  .area-titulo-2 {
+    text-align: center; 
+    padding:0 5% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+  }
+  .area-2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .area-2 h3{
+    font-family: "Raleway", serif;
+    color: var(--azul-escuro);
+    padding-bottom: .4% ;
+    width: 35%;
+  }
+  .area-titulo-2 h2{
+    font-size: 2vw;
+    font-weight: 500;
+    width: 40%;
+    padding-bottom: 7%;
+  }
+  .area-titulo-2 span{
+    font-weight: 1000;
+  }
+  .area-sessao-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+  }
+  
+  .card-sessao-2 {
+    background-color: var(--gelo); 
+    color: var(--preto);
+    border-radius: 1vw;
+    padding: 3vw; 
+    margin: 1vw; 
+    width: 15vw; 
+    height: 45vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0.5vw 2vw rgba(0, 0, 0, 0.2); 
+    opacity: 0; /* Inicialmente invisível */
+    transform: scale(0.8); /* Levemente reduzido */
+}
+
+  
+  .card-sessao-2 h3 {
+    padding: 2%;
+    text-align: center;
+  }
+  
+  .card-sessao-2 p {
+    padding: 2%;
+  }
+  
+  .card-sessao-2 i {
+    font-size: 3rem; /* Aumenta o tamanho do ícone */
+    margin-bottom: 1vh; /* Espaço abaixo do ícone */
+  }
+  .card-sessao-2.fade-in {
+    animation: fadeInUp 0.9s forwards; /* Adiciona a animação aqui */
+    animation-delay: var(--delay); /* Atraso personalizado */
+}
+  
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Fica visível */
+        transform: scale(1); /* Retorna ao tamanho normal */
+    }
+}
+
+/* sessao 3 */
+.sessao-3 {
+  display: flex; 
+  justify-content: space-around; 
+  background-image: url(/src/img/bg-2.png);
+  background-size: cover;
+  background-position: center;
+}
+.sessao-3-esquerdo {
+  width: 50%; /* Mantido em % */
+  padding: 5%; /* Alterado para % */
+}
+.sessao-3-direito {
+  width: 50%; /* Mantido em % */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Alterado para flex-end */
+  align-items: flex-end; /* Alterado para flex-end */
+}
+
+#texto-info {
+  background-color: rgba(255, 255, 255, 0.096);
+  padding: 5%; /* Alterado para % */
+  margin-bottom: 3%; /* Alterado para % */
+  color: var(--branco);
+  margin-left: 4%;
+  margin-top: 15%;
+}
+ #texto-info p{
+  font-family: "Raleway", serif;
+  text-align: left;
+  
+  font-size: 1.5vw;
+}
+.area-titulo-3 h4{
+  font-family: "Raleway", serif;
+  font-weight: 200;
+}
+.area-titulo-3 h3 {
+  margin: 0;
+  color:var(--branco);
+}
+
+.area-titulo-3 h2 {
+  margin: 1% 0 2% 0; /* Alterado para % */
+}
+
+.servicos {
+  display: flex;
+  flex-direction: column; /* Coloca os serviços em coluna */
+}
+.sessao-3-direito .servicos{
+  padding: 5%;
+}
+.servico {
+  display: flex;
+  align-items: center; /* Alinha o ícone e o texto verticalmente */
+  margin-bottom: 2%; /* Alterado para % */
+}
+
+.icone-container {
+  background-color:var(--amarelo-opaco) ;
+  border-radius: 0.5rem; /* Alterado para rem */
+  min-width: 4.1vw; /* Alterado para vw */
+  min-height: 4.1vw; /* Alterado para vw */
+  display: flex; /* Habilita flexbox */
+  align-items: center; /* Centraliza o ícone verticalmente */
+  justify-content: center; /* Centraliza o ícone horizontalmente */
+  margin-right: 2%; /* Alterado para % */
+}
+
+.icone-container i{
+  color: var(--amarelo-full);
+  font-size: 2vw;
+}
+.descricao {
+  flex-grow: 1; /* Permite que a descrição ocupe o restante do espaço */
+}
+
+.espaco-3{
+  padding-bottom: 16%;
+}
+
+.sessao-3 h2 {
+  color: var(--laranja); /* Cor do título */
+  margin: 0;
+  font-size: 1.5vw;
+}
+.sessao-3 h3{
+  color: var(--branco);
+  padding-bottom: 6%;
+  font-size: 2vw;
+  font-weight: 800;
+}
+.sessao-3 h4{
+  color: var(--laranja);
+  font-size: 1.8vw;
+}
+.sessao-3 p {
+  color: var(--branco);
+  margin: 1% 0 0 0; 
+  font-size: 1.2vw;
+}
+
+.foto-container {
+  text-align: center; /* Centraliza a imagem */
+  margin-top: 2%; /* Alterado para % */
+  padding: 5%;
+}
+
+.foto-container img {
+  max-width: 100%; /* Ajusta a largura da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 0.5rem; /* Alterado para rem */
+}
+
+/**SESSAO 4**/
+
+
+.sessao-4 {
+  display: flex;
+  margin: 0 auto; /* Centraliza a seção */
+}
+
+.sessao-4-esquerdo {
+  width: 50%; /* Largura do lado esquerdo */
+  padding-left: 5%; /* Espaço à esquerda */
+}
+
+.sessao-4-esquerdo h3 {
+  color: var(--azul-escuro);
+  padding-top: 8%;
+  padding-bottom: 3%;
+  font-size: 1.8vw;
+  font-family: "Raleway", serif;
+}
+
+.sessao-4-esquerdo h2 {
+  font-size: 3vw;
+  padding-bottom: 4%;
+  font-weight: 800;
+  color: var(--laranja);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.267);
+  margin-bottom: 5%;
+}
+
+.sessao-4-esquerdo p:not(:last-child) {
+  padding-bottom: 4%;
+  font-size: 1.2vw;
+  padding-right: 15%;
+}
+.sessao-4-direito {
+  width: 50%; 
+  display: flex;
+  justify-content: flex-end; /* Alinha o conteúdo à direita */
+  align-items: center;
+}
+
+.sessao-4-direito img {
+  max-width: 90%; 
+  height: auto; /* Mantém a proporção da imagem */
+  align-self: flex-end;
+}
+
+.texto-inferior {
+ 
+  padding-left: 5%; /* Espaço à esquerda */
+  text-align: left; /* Justifica o texto */
+  margin: 20px auto 0; /* Centraliza verticalmente com margem superior */
+  padding-bottom: 5%;
+}
+.texto-inferior p {
+  padding-bottom: 1%;
+  font-size: 1.2vw;
+  padding-right: 10%;
+}
+
+/** sessao 5 **/
+
+.sessao-5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%; /* Espaço ao redor da seção */
+  background-color: var(--azul-escuro);
+}
+
+.sessao-5-esquerdo {
+  width: 50%; /* Largura da coluna da esquerda */
+  display: flex;
+  justify-content: right; /* Centraliza a imagem */
+  align-items: center; /* Alinha verticalmente */
+}
+
+.sessao-5-esquerdo img {
+  max-width: 72%; /* Ajusta a largura da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  padding-right: 2%;
+  margin-left: 2vw;
+ 
+}
+
+.sessao-5-direito {
+  width: 30%; /* Largura da coluna da direita */
+  margin-right: 14%;
+}
+
+.sessao-5-direito h3 {
+  padding-bottom: 3%;
+  color: var(--laranja);
+  font-family: "Raleway", serif;
+  font-weight: 300;
+  font-size: 1.5vw;
+  
+}
+
+.sessao-5-direito h2{
+  font-size: 2vw;
+  color: var(--branco);
+  padding-bottom: 2%;
+}
+.sessao-5-direito p {
+  margin-bottom: 3%; 
+  padding-right: 0vw;
+  color: var(--gelo);
+  font-size: 1.2vw;
+  font-weight: 300;
+}
+
+/**sessao 6**/
+
+.sessao-6 {
+  
+  color: white; /* Cor do texto */
+  padding: 5%; /* Espaçamento ao redor da seção */
+}
+.area-perguntas h3{
+  font-size: 1.8vw;
+  color: var(--laranja);
+  font-family: "Raleway", serif;
+  font-weight: 500;
+  padding-bottom: 1%;
+}
+.area-perguntas h2{
+  font-size: 2vw;
+  color: var(--azul-escuro);
+  font-weight: 800;
+}
+.faq {
+  display: flex;
+  flex-direction: column; /* Coloca as perguntas em coluna */
+  align-items: center; /* Centraliza as perguntas */
+}
+
+details {
+  background-color: var(--azul-escuro); 
+  border-radius: 12px; /* Bordas arredondadas */
+  padding: 2%; /* Espaçamento interno */
+  margin: 2% 0; /* Espaçamento entre as perguntas */
+  width: 80%; /* Largura das boxes */
+  cursor: pointer; /* Cursor em forma de mão ao passar por cima */
+}
+
+summary {
+  font-weight: bold; /* Texto mais pesado para as perguntas */
+  margin: 0; /* Remove margens */
+}
+
+summary::-webkit-details-marker {
+  display: none; /* Remove o marcador padrão do summary */
+}
+
+summary:after {
+  content: ' ▶'; /* Adiciona um ícone ao lado da pergunta */
+  font-weight: normal; /* Peso normal para o ícone */
+}
+
+details[open] summary:after {
+  content: ' ▼'; /* Altera o ícone ao abrir */
+}
+
+details p {
+ 
+  font-weight: 300; /* Texto mais fino para as respostas */
+  margin-top: 3%; /* Espaço acima da resposta */
+}
+
+
+/**footer**/
+
+footer{
+  background-color: var(--preto);
+  padding: 5%;
+}
+
+footer {
+  color: var(--branco);
+  padding: 1%;
+  background-color: var(--preto);
+}
+.footer-content span{
+  color: var(--laranja);
+}
+.footer-content {
+  display: flex; /* Usando flexbox */
+  justify-content: space-between; /* Espaça entre os dois lados */
+  align-items: center; /* Alinha verticalmente */
+}
+
+.footer-left {
+  text-align: center;
+}
+
+.footer-right {
+  text-align: right; 
+}
+
+footer a{
+  text-decoration: none;
+  color: var(--branco);
+  transition: all 0.30s ease-in-out;
+}
+footer a:hover{
+  color: var(--laranja);
+}
+.footer-bottom {
+  text-align: center; /* Centraliza o copyright */
+  margin-top: 20px; /* Espaçamento acima */
+}
