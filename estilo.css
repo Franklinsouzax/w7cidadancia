@@ -199,14 +199,16 @@ body {
   .card-sessao-2 h3 {
     padding: 2%;
     text-align: center;
+    font-size: 1.4vw;
   }
   
   .card-sessao-2 p {
     padding: 2%;
+    font-size: 1.1vw;
   }
   
   .card-sessao-2 i {
-    font-size: 3rem; /* Aumenta o tamanho do ícone */
+    font-size: 4vw; /* Aumenta o tamanho do ícone */
     margin-bottom: 1vh; /* Espaço abaixo do ícone */
   }
   .card-sessao-2.fade-in {
@@ -266,6 +268,7 @@ body {
 
 .area-titulo-3 h2 {
   margin: 1% 0 2% 0; /* Alterado para % */
+  border: 1px solid red;
 }
 
 .servicos {
@@ -372,6 +375,12 @@ body {
   font-size: 1.2vw;
   padding-right: 15%;
 }
+
+/***ultimo paragrafo da sessap 4 do lado esquerdo**/
+.ultimo-4{
+  font-size: 1.2vw;
+}
+
 .sessao-4-direito {
   width: 50%; 
   display: flex;
@@ -487,6 +496,7 @@ details {
 summary {
   font-weight: bold; /* Texto mais pesado para as perguntas */
   margin: 0; /* Remove margens */
+  font-size: 1.2vw;
 }
 
 summary::-webkit-details-marker {
@@ -506,6 +516,7 @@ details p {
  
   font-weight: 300; /* Texto mais fino para as respostas */
   margin-top: 3%; /* Espaço acima da resposta */
+  font-size: 1.2vw;
 }
 
 
