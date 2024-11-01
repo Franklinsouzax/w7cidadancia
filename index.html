@@ -40,8 +40,30 @@
                 <li><a href="#perguntas-frequentes">PERGUNTAS FREQUENTES</a></li>
             </ul>
         </nav>
+ <!-- versao mobile -->
+ <nav class="mobile">
+    <div class="area-mobile">
+        <div class="logo">
+            <img class="w7-mobile" src="/src/img/WhatsApp Image 2024-10-29 at 17.55.16.jpeg" alt="Logo" />
+        </div>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+    <ul class="nav-links">
+        <li><a href="#empresa">EMPRESA</a></li>
+        <li><a href="#servicos">SERVIÇOS</a></li>
+        <li><a href="#quem-somos">QUEM SOMOS</a></li>
+        <li><a href="#perguntas-frequentes">PERGUNTAS FREQUENTES</a></li>
+    </ul>
+</nav>
+
+
     </header>
     <script src="/src/script/nav-bar.js"></script>
+    <script src="/src/script/menu-burger.js"></script>
     
     <main>
         <!-- SESSÃO TOPO -->
@@ -63,7 +85,6 @@
         <div class="area-titulo-2">
             <h2><span>Cidadania Descomplicada: </span>Aprenda a Cada Etapa do Processo</h2>
         </div>
-
         <article class="area-sessao-2">
             <div class="card-sessao-2">
                 <i class="fas fa-user-tie" aria-hidden="true"></i>
@@ -281,12 +302,12 @@
                 <h2>W7 Cidadanias</h2>
                 <article>
                     <p>
-                        Durante a pandemia, a W7 Cidadanias ampliou suas atividades em parceria com outras empresas, diversificando a oferta de serviços para incluir busca de certidões, apostilamento, traduções juramentadas e confecção de pastas. Esse crescimento foi impulsionado pelo compromisso em oferecer soluções acessíveis, com uma relação clara entre custo e benefício. A transparência nos preços e serviços se tornou um pilar fundamental da empresa, permitindo que os clientes se sentissem seguros e bem informados ao longo do processo.
+                        Durante a pandemia, a W7 Cidadanias ampliou suas atividades em parceria com outras empresas, diversificando a oferta de serviços para incluir busca de certidões, apostilamento, traduções juramentadas e confecção de pastas. Esse crescimento foi impulsionado pelo compromisso em oferecer soluções acessíveis, com uma relação clara entre custo e benefício.
                     </p>
-                    <p>
+                    <p class="oculto hidden">
                         A W7 Cidadanias, com quatro anos de atuação no mercado, surgiu a partir da identificação de um desafio significativo na busca pela dupla cidadania. Desde o início, a empresa se propôs a enfrentar a complexidade de localizar certidões em outros países, percebendo que muitos serviços eram inacessíveis devido ao alto custo—300 euros apenas para a busca inicial—o que tornava o acesso à cidadania dual parecer reservado apenas àqueles que podiam pagar.
                     </p>
-                    <p class="ultimo-4">
+                    <p class="ultimo-4 oculto hidden">
                         A jornada para se tornar uma empresa respeitável e confiável não foi fácil. A W7 Cidadanias enfrentou desafios como a necessidade de estabelecer processos transparentes e eficientes, garantindo que todos os clientes compreendessem cada etapa do processo. A equipe, composta por profissionais com vasta experiência na área jurídica, recebeu orientação de especialistas renomados como Dr. João Done, o que contribuiu para a construção de uma base sólida.
                     </p>
                 </article>
@@ -297,14 +318,24 @@
             </div>
         </section>
         
-        <section class="texto-inferior">
+        <section class="texto-inferior oculto hidden">
             <p>
                 Apesar de um início promissor baseado no boca a boca, a W7 Cidadanias enfrentou um grande desafio quando o escritório foi assaltado. Após um período de reflexão e adaptação, a decisão foi reerguer a empresa e explorar o potencial do mercado digital, o que resultou em uma nova fase de crescimento.
             </p>
-            <p>
+            <p class="oculto hidden">
                 Hoje, a W7 Cidadanias se dedica a transformar a maneira como as pessoas encaram o processo de cidadania, democratizando o acesso e proporcionando conhecimento e suporte em cada etapa do caminho. A missão é garantir que todos tenham a oportunidade de conquistar seus direitos de cidadania de forma acessível, transparente e descomplicada, sempre focando na melhor relação custo-benefício.
             </p>
         </section>
+        
+        <div class="button-container">
+            <button class="veja-mais" onclick="toggleTexto()">Leia mais</button>
+        </div>
+        <div class="foto-mobile">
+            <img src="/src/img/versao-mobile.png" alt="foto-licenciada do freepik">
+        </div>
+        <!-- Link para o seu script JavaScript -->
+        <script src="/src/script/button-veja-mais.js"></script>
+        
         <!-- sessao-5 -->
 
         <section class="sessao-5" id="solicite-agora">
@@ -319,7 +350,7 @@
                 <p>Agende agora mesmo um orçamento sem compromisso e surpreenda-se com nossa qualidade.</p>
                 <p>Clique no botão abaixo:</p>
                
-                <a class="button" href="">Quero me tornar um especialista em cidadania</a>
+                <a class="button button-1" href="">Quero me tornar um especialista em cidadania</a>
             </div>
         </section>
         <section class="sessao-6" id="perguntas-frequentes">
@@ -384,7 +415,6 @@
             </p>
         </div>
     </footer>
-    
     <script src="/src/script/animation.js"></script>
 </body>
 </html>

@@ -21,6 +21,9 @@ html{
 /***NAV BAR*/
 
 /* Estilos para o header e nav */
+.mobile{
+  display: none;
+}
 header {
   position: fixed; 
   top: 0;
@@ -62,7 +65,6 @@ nav.desktop ul {
   display: flex; 
   align-items: self-end; 
   justify-content: space-between;
-  
   padding-right: 1%;
   width: 39%;
 }
@@ -82,13 +84,10 @@ nav.desktop a:hover {
   transform: scale(1.1); 
 }
 
-body {
-  padding-top: 70px; /* Para que o conteúdo não fique escondido atrás do navbar */
-}
-
 /* topo */
 
 .topo {
+    margin-top: 5%;
     background-image: url('your-background-image.jpg');
     background-size: cover;
     display: flex;
@@ -103,7 +102,7 @@ body {
     background-color: rgba(0, 0, 0, 0.678); 
     color: white;
     padding: 4vw; 
-    width: 20%;
+    width: 30%;
     height: 100%;
     box-shadow: 0 0.5vw 2vw rgba(0, 0, 0, 0.5); 
     border-radius: 25px;
@@ -137,9 +136,9 @@ body {
   }
 
   /* sessao 2 */
+
   .sessao-2 {
     padding: 5% 0; 
-   
   }
   
   .area-titulo-2 {
@@ -208,7 +207,7 @@ body {
   }
   
   .card-sessao-2 i {
-    font-size: 4vw; /* Aumenta o tamanho do ícone */
+    font-size: 4vw; 
     margin-bottom: 1vh; /* Espaço abaixo do ícone */
   }
   .card-sessao-2.fade-in {
@@ -223,6 +222,7 @@ body {
     }
 }
 
+/* sessao 3 */
 /* sessao 3 */
 .sessao-3 {
   display: flex; 
@@ -340,8 +340,8 @@ body {
   border-radius: 0.5rem; /* Alterado para rem */
 }
 
-/**SESSAO 4**/
 
+/**SESSAO 4**/
 
 .sessao-4 {
   display: flex;
@@ -376,7 +376,6 @@ body {
   padding-right: 15%;
 }
 
-/***ultimo paragrafo da sessap 4 do lado esquerdo**/
 .ultimo-4{
   font-size: 1.2vw;
 }
@@ -406,7 +405,12 @@ body {
   font-size: 1.2vw;
   padding-right: 10%;
 }
-
+.button-container{
+display: none;
+}
+.foto-mobile{
+  display: none;
+}
 /** sessao 5 **/
 
 .sessao-5 {
@@ -560,4 +564,578 @@ footer a:hover{
 .footer-bottom {
   text-align: center; /* Centraliza o copyright */
   margin-top: 20px; /* Espaçamento acima */
+}
+            
+              /* VERSÃO MOBILE */
+
+
+@media (max-width: 768px) {
+
+  /* barra de navegação */
+  * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* Estilo geral para o header */
+header {
+    position: fixed; 
+    top: 0;
+    width: 100%; 
+    z-index: 1000; 
+    transition: background-color 0.3s; 
+}
+
+/* Estilos da versão mobile */
+nav.mobile {
+  display: flex; /* Mostra a versão mobile */
+  background-color: var(--preto); /* Cor inicial */
+  justify-content: space-between; /* Logo à esquerda, menu à direita */
+  align-items: center; 
+  flex-direction: column;
+  padding: 10px;
+  transition: background-color 0.3s; /* Transição para a opacidade */
+}
+
+nav.mobile.scrolled {
+  background-color: rgba(0, 0, 0, 0.8); /* Transição para cor transparente ao rolar */
+}
+
+.mobile .logo {
+  flex: 1; /* Permite que a logo ocupe o espaço necessário */
+}
+ .w7-mobile {
+  width: 12%;
+  height: auto;
+  transition: opacity 0.3s, visibility 0.3s; /* Transição suave */
+} 
+
+.w7-mobile.hidden{
+  opacity: 0;
+}
+
+.menu-toggle {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.bar {
+  width: 12vw;
+  height: 1vh;
+  background-color: white;
+  margin: 8% 0;
+}
+
+.area-mobile {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex; /* Usa display flex para os links */
+  flex-direction: column;
+  background-color: var(--preto);
+  width: 100%;
+  padding: 10px 0;
+  margin: 0; /* Remove margem para evitar espaço indesejado */
+}
+.nav-links {
+  display: none; /* Começa como escondida */
+}
+
+.nav-links.active {
+  display: flex; /* Exibe os links ao ativar */
+}
+
+.nav-links li {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+
+/* Efeito de opacidade ao rolar */
+nav.mobile.scrolled {
+  background-color: rgba(0, 0, 0, 0.616); /* Cor de fundo mais transparente */
+}
+.nav-links.scrolled {
+  background-color: rgba(0, 0, 0, 0); /* Cor de fundo mais transparente */
+}
+/* fim da barra de navegação */
+
+  nav.desktop{
+  display: none;
+}
+.body{
+  padding-top: 0;
+}
+.topo {
+  flex-direction: row; /* Alinha os itens em linha */
+  justify-content: center; /* Centraliza o conteúdo */
+  padding: 5vw; /* Mantém o padding */
+  background-size: cover;
+  margin-top: 0;
+  height: 80vh;
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+
+.card-top {
+  width: 93%; /* Ajusta a largura do card para ocupar mais espaço */
+  margin: 0 auto; /* Centraliza o card */
+  align-items: center; /* Centraliza os itens dentro do card */
+  height: 95vw;
+}
+
+.card-top h2 {
+  font-size: 5vw; /* Aumenta o tamanho da fonte para mobile */
+}
+
+.card-top p {
+  font-size: 4vw; /* Aumenta o tamanho da fonte para a descrição */
+  text-align: center; /* Centraliza o texto da descrição */
+  padding: 10% 0; /* Ajusta o padding */
+}
+
+.button {
+  align-self: center; /* Centraliza o botão */
+  font-size: 4vw; /* Ajusta o tamanho da fonte do botão */
+  padding: 6%; /* Aumenta o padding do botão para torná-lo mais clicável */
+}
+
+.button:hover {
+  transform: scale(1.1); /* Aumenta o efeito de hover */
+}
+
+/* sessao 2 */
+
+.area-sessao-2 {
+  flex-direction: column; /* Coloca os cards um abaixo do outro em telas pequenas */
+  align-items: center; /* Centraliza os cards */
+}
+
+.card-sessao-2 {
+  width: 70vw; /* Ajusta a largura dos cards para 90% em mobile */
+  height: 70vw; /* Altura automática para melhor responsividade */
+  margin-bottom: 10%;
+}
+
+.area-titulo-2 h2 {
+  font-size: 5vw; /* Aumenta o tamanho da fonte no mobile */
+  width: 100%; /* Largura total no mobile */
+  padding: 8% 0;
+  padding-top: 3%;
+}
+
+.area-2 h3 {
+  width: 100%; /* Largura total para o título da área no mobile */
+  font-size: 4vw;
+  padding-left: 3%;
+}
+
+.card-sessao-2 i {
+  font-size: 13vw;
+}
+.card-sessao-2 h3{
+  font-size: 5vw;
+}
+.card-sessao-2 p{
+  font-size: 4vw;
+}
+
+    /**SESSÃO 3**/
+    
+    .sessao-3 {
+      display: flex; 
+      flex-direction: column; /* Coloca tudo em coluna */
+      align-items: center; /* Centraliza os itens */
+      background-image: url(/src/img/bg-2.png);
+      background-size: cover;
+      background-position: center;
+  }
+  .sessao-3-esquerdo, 
+  .sessao-3-direito {
+      width: 90%; /* Define largura total para mobile */
+      padding: 5%; /* Padding em porcentagem */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+  .sessao-3-direito{
+    padding: 0;
+    width: 100%;
+  }
+  .sessao-3 h2 {
+    font-size: 5vw;
+    padding: 0 1%;
+  }
+  .sessao-3 p {
+    font-size: 4vw;
+    padding: 0 ;
+  }
+  #texto-info {
+      background-color: rgba(255, 255, 255, 0.096);
+      padding: 5%; 
+      margin: 3% 0; /* Margin vertical para espaçamento */
+      margin-right:0 ;
+      color: var(--branco);
+      text-align: right; /* Centraliza o texto */
+      margin-left: 4%;
+      
+  }
+
+  #texto-info p {
+      font-family: "Raleway", serif;
+      text-align: right; 
+      font-size: 4vw; /* Aumenta o tamanho da fonte para mobile */
+     
+  }
+
+  .area-titulo-3 {
+      text-align: center; 
+      margin: 2% 0; 
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      width: 90%;
+  }
+  .area-titulo-3 h3{
+    width: 100%;
+    font-size: 5vw;
+    text-align: left;
+  }
+  .area-titulo-3 h4 {
+      margin: 1% 0; /* Margens verticais */
+      font-size: 5vw; /* Aumenta o tamanho da fonte */
+      text-align: left;
+      width: 100%;
+  }
+  .espaco-3{
+    padding: 0;
+  }
+  .servicos {
+      display: flex;
+      flex-direction: column; /* Coloca os serviços em coluna */
+      align-items: center; /* Centraliza os serviços */
+      margin: 0;
+      width: 95%;
+  }
+  .servico {
+    display: flex;
+    flex-direction: column; /* Coloca ícone em cima do texto */
+    align-items: center; /* Centraliza o conteúdo */
+    margin-bottom: 5%; /* Espaçamento entre serviços */
+    width: 100%; /* Largura total para cada serviço */
+    
+  }
+.icone-container {
+    background-color: var(--amarelo-opaco);
+    border-radius: 0.5rem;
+    padding: 13%;
+    height: 13vw;
+    width: 13vw;
+    display: flex; 
+    align-items: center; /* Centraliza o ícone verticalmente */
+    justify-content: center; /* Centraliza o ícone horizontalmente */
+    margin-bottom: 1%; /* Espaço abaixo do ícone */
+    
+  }
+  .icone-container i {
+      color: var(--amarelo-full);
+      font-size: 13vw; /* Ajusta o tamanho do ícone */
+  }
+  
+  .descricao {
+      flex-grow: 1; /* Permite que a descrição ocupe o restante do espaço */
+      text-align: center; /* Centraliza a descrição */
+      
+  }
+  
+  .foto-container {
+      text-align: center; /* Centraliza a imagem */
+      margin-top: 2%; /* Margem acima da imagem */
+      padding: 5%;
+    }
+  
+  .foto-container img {
+      max-width: 100%; /* Ajusta a largura da imagem */
+      height: auto; /* Mantém a proporção da imagem */
+      border-radius: 0.5rem; /* Bordas arredondadas */
+  }
+  /***sessao 4**/
+  .sessao-4 {
+    flex-direction: column; /* Alinha os elementos em coluna */
+    margin: 0; /* Margem nas laterais */
+}
+
+.sessao-4-esquerdo {
+    width: 100%; /* Largura total na versão mobile */
+    padding-left: 0; /* Remove o espaço à esquerda */
+    padding-right: 0; /* Remove o espaço à direita */
+}
+
+.sessao-4-direito {
+    display: none; /* Oculta a imagem */
+}
+
+.sessao-4-esquerdo h3 {
+    font-size: 5vw; /* Aumenta o tamanho da fonte */
+}
+
+.sessao-4-esquerdo h2 {
+    font-size: 6vw; /* Aumenta o tamanho da fonte */
+}
+
+.sessao-4-esquerdo p:not(:last-child) {
+    padding-bottom: 3%; /* Ajusta o espaçamento */
+    font-size: 4vw; /* Aumenta o tamanho da fonte */
+    padding: 0 20% 3% 5%;
+}
+
+.ultimo-4 {
+    font-size: 4vw; /* Mantém o tamanho da fonte */
+    padding: 0 20% 3% 5%;
+}
+.texto-inferior{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.texto-inferior p {
+    display: flex;
+    font-size: 4vw; /* Ajusta o tamanho da fonte */
+    padding-right: 0; /* Remove o padding à direita */
+    padding-bottom: 3%; /* Ajusta o espaçamento */
+    /* Remover a borda para seguir o padrão dos outros textos */
+    border: none; /* Para garantir que não tenha borda */
+    padding: 0 20% 3% 5%;
+    
+}
+.button-container{
+  display: flex;
+}
+.veja-mais {
+    display: inline-block; /* Mostra o botão */
+    background-color: var(--azul-escuro); /* Substitua pela cor desejada */
+    color: var(--branco); /* Cor do texto */
+    border: none; /* Remove borda padrão */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 3.2% 7%; /* Espaçamento interno */
+    font-size: 5vw; /* Ajusta o tamanho da fonte do botão */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    margin-top: 10px; /* Espaçamento acima do botão */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 15%;
+    margin-left: 3%;
+}
+.hidden {
+    display: none; /* Oculta o elemento */
+}
+.foto-mobile{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.foto-mobile img{
+  width: 100%;
+  padding-bottom: 10%;
+}
+
+.sessao-5 {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  background-color: var(--azul-escuro);
+  flex-direction: column; /* Alinha os elementos em coluna para mobile */
+  padding: 19% 0;
+ 
+}
+
+.sessao-5-esquerdo {
+  display: none; 
+}
+
+.sessao-5-direito {
+  width: 100%; /* Largura total na versão mobile */
+  text-align: center; /* Centraliza o texto */
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  width: 90%;
+}
+
+.sessao-5-direito h3 {
+  padding-bottom: 3%;
+  color: var(--laranja);
+  font-family: "Raleway", serif;
+  font-weight: 300;
+  font-size: 5vw; /* Ajuste de tamanho para mobile */
+  text-align: left;
+  width: 100%;
+}
+
+.sessao-5-direito h2 {
+  font-size: 6vw; /* Ajuste de tamanho para mobile */
+  color: var(--branco);
+  padding-bottom: 2%;
+  text-align: left;
+}
+
+.sessao-5-direito p {
+
+  width: 100%;
+  margin-bottom: 3%; 
+  padding-right: 0; /* Remove padding à direita */
+  color: var(--gelo);
+  font-size: 4vw; /* Ajuste de tamanho para mobile */
+  font-weight: 300;
+  text-align: left;
+}
+
+.sessao-5 .button{
+  font-size: 4vw;
+  padding: 4% 3%;
+  width: 80%;
+  border-radius: 16px;
+  margin-right: 5%;
+  margin-top:5%;
+}
+
+/**sessao 6**/
+
+.sessao-6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white; /* Cor do texto */
+  padding: 8%; /* Espaçamento ao redor da seção */
+}
+
+.area-perguntas {
+  text-align: left; /* Alinha o texto à esquerda */
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+.area-perguntas h3 {
+  font-size: 5vw; /* Tamanho da fonte para mobile */
+  color: var(--laranja);
+  font-family: "Raleway", serif;
+  font-weight: 500;
+  padding-bottom: 1%;
+}
+
+.area-perguntas h2 {
+  font-size: 6vw; /* Tamanho da fonte para mobile */
+  color: var(--azul-escuro);
+  font-weight: 800;
+}
+
+.faq {
+  display: flex;
+  flex-direction: column; /* Coloca as perguntas em coluna */
+  
+}
+
+details {
+  background-color: var(--azul-escuro);
+  border-radius: 12px; /* Bordas arredondadas */
+  padding: 3%; /* Ajuste o espaçamento interno para mobile */
+  margin: 2% 0; /* Espaçamento entre as perguntas */
+  width: 100%; /* Largura total para mobile */
+  cursor: pointer; /* Cursor em forma de mão ao passar por cima */
+
+}
+
+summary {
+   font-weight: 400;
+  margin: 0; /* Remove margens */
+  font-size: 4vw; /* Tamanho da fonte para mobile */
+  
+}
+summary::-webkit-details-marker {
+  display: none; /* Oculta o marcador padrão no Chrome e Safari */
+}
+summary::after {
+  content: ''; /* Remove a setinha ao final do texto */
+}
+details[open] summary::after {
+  content: ''; /* Remove a setinha ao abrir */
+}
+
+details p {
+  font-weight: 250; /* Texto mais fino para as respostas */
+  margin-top: 3%; /* Espaço acima da resposta */
+  font-size: 4vw; /* Tamanho da fonte para mobile */
+  padding: 5% 0;
+
+}
+
+footer {
+  background-color: var(--preto);
+  padding: 5%; /* Espaço ao redor do footer */
+  color: var(--branco);
+  text-align: center; /* Centraliza o texto em dispositivos móveis */
+}
+
+.footer-content {
+  display: flex; /* Usando flexbox */
+  flex-direction: column; /* Coloca os itens em coluna para mobile */
+  align-items: center; /* Alinha todos os itens no centro */
+}
+
+.footer-left {
+  margin-bottom: 2%; /* Espaçamento abaixo da seção à esquerda */
+}
+.footer-left p{
+  font-size: 3.2vw;
+}
+
+.footer-right {
+  margin-bottom: 2%; /* Espaçamento abaixo da seção à direita */
+}
+.footer-right i{
+  padding-top: 3%;
+  font-size: 6vw;
+}
+
+.footer-right p {
+  margin: 2% 0; /* Margem entre os parágrafos */
+  font-size: 3vw; /* Tamanho da fonte menor para mobile */
+}
+
+.footer-content span {
+  color: var(--laranja); /* Destaca os rótulos */
+  font-size: 3vw; /* Tamanho da fonte para os rótulos */
+}
+
+
+.footer-bottom {
+  margin-top: 2%; /* Espaçamento acima do copyright */
+  font-size: 3vw; /* Tamanho da fonte do copyright */
+}
+
 }
