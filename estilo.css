@@ -41,7 +41,7 @@ nav.desktop {
 }
 
 nav.desktop.scrolled {
-  background-color: rgba(0, 0, 0, 0.26);
+  background-color: rgba(0, 0, 0, 0.192);
 }
 nav.desktop a.scrolled {
   color: #ffcc005b; /* Muda a cor quando a classe "scrolled" está presente */
@@ -359,6 +359,7 @@ nav.desktop a:hover {
   padding-bottom: 3%;
   font-size: 1.8vw;
   font-family: "Raleway", serif;
+  padding-left: 5%;
 }
 
 .sessao-4-esquerdo h2 {
@@ -368,6 +369,7 @@ nav.desktop a:hover {
   color: var(--laranja);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.267);
   margin-bottom: 5%;
+  padding-left: 5%;
 }
 
 .sessao-4-esquerdo p:not(:last-child) {
@@ -738,13 +740,15 @@ nav.mobile.scrolled {
   font-size: 5vw; /* Aumenta o tamanho da fonte no mobile */
   width: 100%; /* Largura total no mobile */
   padding: 8% 0;
-  padding-top: 3%;
+  padding-top: 2%;
+  padding-bottom: 15%;
 }
 
 .area-2 h3 {
   width: 100%; /* Largura total para o título da área no mobile */
-  font-size: 4vw;
-  padding-left: 3%;
+  font-size: 5vw;
+  padding-left: 5.9%;
+  padding-bottom: 0;
 }
 
 .card-sessao-2 i {
@@ -766,8 +770,17 @@ nav.mobile.scrolled {
       background-image: url(/src/img/bg-2.png);
       background-size: cover;
       background-position: center;
+    
   }
-  .sessao-3-esquerdo, 
+  .sessao-3-esquerdo{
+    width: 100%; /* Define largura total para mobile */
+    padding: 5%; /* Padding em porcentagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+  } 
   .sessao-3-direito {
       width: 90%; /* Define largura total para mobile */
       padding: 5%; /* Padding em porcentagem */
@@ -775,10 +788,12 @@ nav.mobile.scrolled {
       justify-content: center;
       align-items: center;
       flex-direction: column;
+
   }
   .sessao-3-direito{
     padding: 0;
     width: 100%;
+    
   }
   .sessao-3 h2 {
     font-size: 5vw;
@@ -802,7 +817,7 @@ nav.mobile.scrolled {
   #texto-info p {
       font-family: "Raleway", serif;
       text-align: right; 
-      font-size: 4vw; /* Aumenta o tamanho da fonte para mobile */
+      font-size: 4.5vw; /* Aumenta o tamanho da fonte para mobile */
      
   }
 
